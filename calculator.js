@@ -10,6 +10,7 @@ function initCalculator() {
     inputB = document.getElementById('argB');
     opSelect = document.getElementById('operator');
     actionButton = document.getElementById('runBtn');
+
     historyDisplay = document.getElementById('historyView');
     currentDisplay = document.getElementById('currentView');
     errorDisplay = document.getElementById('errorView');
@@ -46,6 +47,7 @@ function formatResult(num) {
     if (Number.isInteger(num)) {
         return num.toString();
     }
+
     if (Math.abs(num) < 1e-6) {
         return num.toExponential(6).replace(/\.?0+e/, 'e');
     }
@@ -65,6 +67,7 @@ function performComputation() {
         markError(1, 'Заполните первое число');
         return;
     }
+
     if (rawB === '') {
         markError(2, 'Заполните второе число');
         return;
@@ -77,6 +80,7 @@ function performComputation() {
         markError(1, 'Первое значение не является числом');
         return;
     }
+
     if (isNaN(valB)) {
         markError(2, 'Второе значение не является числом');
         return;
