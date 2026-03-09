@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Лаба калькулятор</title>
+</head>
+
+<body>
+    <div class="calc-box">
+        <div class="entry-area">
+            <input type="number" class="num-field" id="argA" placeholder="0">
+            <select class="action-select" id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="number" class="num-field" id="argB" placeholder="0">
+        </div>
+
+        <div class="output-panel">
+            <button class="compute-btn" id="runBtn">подсчитать</button>
+            <div class="result-block">
+                <div class="history-log" id="historyView"></div>
+                <div class="last-result" id="currentView"></div>
+            </div>
+            <div class="alert-msg" id="errorView"></div>
+        </div>
+    </div>
+</body>
+
+</html>
